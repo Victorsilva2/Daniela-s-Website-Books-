@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* About Me section */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px; /* limits the width */
+    margin: 0 auto; /* centers the paragraph horizontally */
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers all text inside main */
+}
+
+/* Section styles for BookReviews */
+section#BookReviews {
+    background-color: #e7f4e7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+section#BookReviews h2 {
+    color: #4CAF50;
+}
+
+section#BookReviews p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+section#BookReviews a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section#BookReviews a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Link styling for general use */
+a {
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Centering the image */
+.image-container {
+    display: flex;
+    justify-content: center;  /* Centers the image horizontally */
+    align-items: center;      /* Centers the image vertically if needed */
+    margin-top: 30px;         /* Adds space between the image and the top section */
+}
+
+img.img-fluid {
+    max-width: 200px;         /* Limits the image size */
+    border-radius: 50%;       /* Makes the image round */
+    margin-bottom: 20px;      /* Adds some space between the image and the About Me text */
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daniela's Book Space</h1>
+    </header>
+
+    <div class="image-container">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHVT_V22Drl-A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727054085788?e=2147483647&v=beta&t=uM0-7pvtAlN3f53NZJTizowRUQpZSYBulUCr3OH4D8g" alt="Daniela" class="img-fluid rounded-circle">
+    </div>
+
+    <h1>About Me</h1>
+    <p>I have an undergraduate English degree from the University of Texas at Rio Grande Valley, etc. </p>
+
+    <main>
+        <section id="BookReviews">
+            <h2><a href="../BookReviews/index.html">Book Reviews</a></h2>
+            <p>In this section you can find all my book reviews!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daniela's Book Reviews. All rights reserved.</p>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBvH3-Tqk6M1N5R6IJY3btig0znnqlyw7Q",
+            authDomain: "bookreviews-a8714.firebaseapp.com",
+            projectId: "bookreviews-a8714",
+            storageBucket: "bookreviews-a8714.firebasestorage.app",
+            messagingSenderId: "950563472478",
+            appId: "1:950563472478:web:24a0c8d2c7de8a7137a0cf",
+            measurementId: "G-CQXXEP9L3W"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+
+        // Authentication state observer
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is logged in, display the content
+                console.log("User logged in:", user);
+            } else {
+                // User is not logged in, redirect to the login page
+                window.location.href = "login.html"; // Redirect to login page
+            }
+        });
+    </script>
+</body>
+</html>
